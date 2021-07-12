@@ -11,7 +11,7 @@
       {{ range sort .Pages.ByLastmod.Reverse }}
       <li class="nav-item">
         <a class="nav-link py-0" href="{{.Permalink}}">
-          <span class="fira-mono">
+          <span class="font-monospace">
             {{.Date.Format "2006-01-02"}}
           </span>
           <span class="mx-1 ms-0">

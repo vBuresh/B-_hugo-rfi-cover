@@ -7,7 +7,7 @@
 {{- $css  := resources.Get $sass | resources.ExecuteAsTemplate $scss . | toCSS $cssOpts -}}
 {{- $css1 := resources.Get "css/bootstrap.css" -}}
 {{- $css2 := resources.Get "css/bscustomize-rfi.css" -}}
-{{- $css3 := resources.Get "css/cover.css" -}}
+{{- $css3 := resources.Get "css/cover-rfi.css" -}}
 {{- $css4 := resources.Get "css/custom.css" -}}
 
 {{- if .Site.Params.cssMinify -}}
