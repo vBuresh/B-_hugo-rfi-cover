@@ -1,0 +1,52 @@
+<header class="mb-auto">
+  <div class="float-md-start mb-0">
+    <a class="navbar-brand" style="color: {{ .Site.Params.mainColour }}" aria-current="page" href="{{ "/" | relURL }}">
+      {{- if .Site.Params.logo -}}
+      {{- $out_fo  := "brand.svg" -}}
+      {{- $img_n   := .Site.Params.logo -}}
+      {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+      {{- $img     := resources.Get $img_n -}}
+      {{- if eq $type "svg" -}}
+      {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+      {{- end -}}
+      <img src="{{- $img.Permalink | relURL -}}" width="30" height="30" class="d-inline-block align-top me-2" alt="brand">
+      {{- end -}}
+      <span class="navbar-brand mb-0 h1">
+        {{- if .Site.Params.title -}}
+        {{ .Site.Params.title }}
+      </span>
+      {{- end -}}
+    </a>
+  </div>
+  <nav class="nav nav-masthead justify-content-center float-md-end">
+    {{ range .Site.RegularPages }}
+    {{- if eq .Params.showInMenu true -}}
+    <a class="nav-link" href="{{- .Permalink | relURL -}}" aria-current="page">
+      {{- .Title -}}
+    </a>
+    {{- end -}}
+    {{- end -}}
+    {{- range .Site.Sections -}}
+    {{- if not (eq .Title "singles") -}}
+    {{- $secCount := len .Sections -}}
+    {{- if (ne $secCount 0) }}
+    {{- else -}}
+    <a style="color: {{ .Site.Params.mainColour }}" class="nav-link" href="{{- .Permalink | relURL -}}">
+      {{- .Title -}}
+    </a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{ if .Site.Params.darkMode -}}
+    <a class="nav-link">
+      <span class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="darkSwitch" />
+        <!-- <label class="custom-control-label" for="darkSwitch">Dark Mode</label> -->
+      </span>
+    </a>
+<script>
+var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("load",function(){if(darkSwitch){var darkThemeSelected=localStorage.getItem("darkSwitch")!==null&&localStorage.getItem("darkSwitch")==="dark";darkSwitch.checked=darkThemeSelected;darkSwitch.addEventListener("change",function(){resetTheme();});}});function resetTheme(){if(darkSwitch.checked){document.body.setAttribute("data-theme","dark");localStorage.setItem("darkSwitch","dark");}else{document.body.removeAttribute("data-theme");localStorage.removeItem("darkSwitch");}}
+</script>
+    {{ end -}}
+  </nav>
+</header>

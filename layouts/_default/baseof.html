@@ -1,0 +1,42 @@
+<!doctype>
+<html lang="{{ .Site.LanguageCode }}" class="h-100">
+
+  <head>
+    {{- partial "meta.html" . -}}
+
+    <title>{{- block "title" . -}}
+      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+      {{- end -}}</title>
+
+    {{- partial "stylesheets.html" . -}}
+    {{- partial "favicons.html" . -}}
+  </head>
+
+  <body class="d-flex h-100 text-center">
+  {{ if .Site.Params.darkMode -}}
+    <script>
+        function initDarkModeTheme() {
+          var darkThemeSelected =
+            localStorage.getItem("darkSwitch") !== null &&
+            localStorage.getItem("darkSwitch") === "dark";
+          darkThemeSelected
+            ? document.body.setAttribute("data-theme", "dark")
+            : document.body.removeAttribute("data-theme");
+        }
+      </script>
+    <script>initDarkModeTheme();</script>
+   {{- end }}
+    {{- partial "sidebar-btn-inset.html" . -}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      {{- partial "navbar.html" . -}}
+      <div id="content">
+        <main>{{- block "main" . }}
+          {{- end }}</main>
+      </div>
+      {{- partial "footer.html" . -}}
+      {{- partial "sidebar.html" . -}}
+      {{- partial "scripts.html" . -}}
+    </div>
+  </body>
+
+</html>
