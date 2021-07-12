@@ -1,15 +1,36 @@
-/* * Globals
+/* {{ .Site.Params.mainColour }}
+* Globals
 https://discourse.gohugo.io/t/hugo-pipes-for-scss-conversion-and-configurable-colors/16798/2
 :root {
  --main-bg-color: {{ .Site.Params.colors.background | default "#6fcdbd" }};
 }
-
 */
+
+/*  var(--c0de-bg-chroma); --bs-gradient
+* CSS variables. Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.
+https://getbootstrap.com/docs/5.0/customize/css-variables/ */
+
 :root {
-  --mainColour: #0d6efd;
+  --code-bg-chroma: #282c34;
+  --mainColour: var(--bs-primary);
   --bs-font-sans-serif: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+/* bs228 */
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: 0.875em;
+}
+
+/* padding: 1rem;
+background-color: var(--c0de-bg-chroma);
+color: #f8f9fa;
+font-size: 1em; */
 
 .cover-container {
   max-width: 42em;
@@ -17,7 +38,7 @@ https://discourse.gohugo.io/t/hugo-pipes-for-scss-conversion-and-configurable-co
 
 /* syntax */
 
-/* Background */ .chroma { color: #f8f8f2; background-color: #282c34;  font-family: 'Fira Code'; }
+/* Background */ .chroma { color: #f8f8f2; background-color: var(--code-bg-chroma);  font-family: var(--bs-font-monospace); }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
