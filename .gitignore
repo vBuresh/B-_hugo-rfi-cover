@@ -7,23 +7,13 @@
 
 # Folders and files to ignore
 
-node_modules/*
 assets/css/bootstrap-grid.css
 assets/css/bootstrap-reboot.css
 assets/css/bootstrap-utilities.css
 
-content/
-# исключаются только b6_ и.или s8_
-#!не распространяется на b6- и s8-
-b6_*
-g8_*
-bslast-*
-
 static/images
 static/js/bootstrap.bundle.min.js.map
 static/css
-
-bootstrap.bundle.min.js.map
 
 example_*
 public/
@@ -37,6 +27,11 @@ node_modules/
 resources/
 vDevs/
 wREADME.md
+
+# исключаются только b6_ и.или s8_
+#!не распространяется на b6- и s8-
+b6_*
+g8_*
 
 # Файлы редактора VScode
 .vscode
