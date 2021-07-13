@@ -106,7 +106,9 @@ Finding a Language's Scope Name
 
 [Finding a Language's Scope Name](https://flight-manual.atom.io/using-atom/sections/basic-customization/#finding-a-languages-scope-name)
 
+{{< note >}}
 overrides, you'll need to know the scope name for the language. We've already done this for finding a scope for writing a snippet in Snippet Format, but we can quickly cover it again.
+{{< /note >}}
 
 The scope name is shown in the settings view for each language. Click on "Packages" in the navigation on the left, search for the language of your choice, select it, and you should see the scope name under the language name heading:
 
