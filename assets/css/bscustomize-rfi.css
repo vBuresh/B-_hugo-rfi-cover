@@ -8,7 +8,14 @@ https://discourse.gohugo.io/t/hugo-pipes-for-scss-conversion-and-configurable-co
 
 /*  var(--c0de-bg-chroma); --bs-gradient
 * CSS variables. Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.
-https://getbootstrap.com/docs/5.0/customize/css-variables/ */
+https://getbootstrap.com/docs/5.0/customize/css-variables/
+
+  bs-primary: rgb;
+  mainAccent: rgb(from ... r g b / 80%);
+https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
+}
+  var(--myAccent)
+*/
 
 :root {
   --code-bg-chroma: #282c34;
@@ -50,7 +57,13 @@ font-size: 1em; */
 
 /* syntax */
 
-/* Background */ .chroma { color: #f8f8f2; background-color: var(--code-bg-chroma);  font-family: var(--bs-font-monospace); }
+/* Background */
+.chroma {
+  color: #f8f8f2;
+  background-color: var(--code-bg-chroma);
+  font-family: var(--bs-font-monospace);
+  padding: 10px 10px 0;
+}
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
