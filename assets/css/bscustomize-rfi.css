@@ -17,6 +17,18 @@ https://getbootstrap.com/docs/5.0/customize/css-variables/ */
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/*TODO change acsient color 205-211 */
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+
 /* bs228 */
 
 pre {
