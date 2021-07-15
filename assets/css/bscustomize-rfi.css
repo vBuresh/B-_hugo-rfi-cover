@@ -17,6 +17,12 @@ https://getbootstrap.com/docs/5.0/customize/css-variables/ */
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* 205 */
+
+a {
+  text-decoration: none;
+}
+
 /* bs228 */
 
 pre {
