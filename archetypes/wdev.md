@@ -2,7 +2,7 @@
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 title: {{ replace .Name "-" " " | title }}
-subtitle: subtitle of the published article
+# subtitle: '— «»'
 description: short description of the article
 summary: three-line summary of the article.
 draft: false
