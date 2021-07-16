@@ -20,8 +20,9 @@
   </div>
   <nav class="nav nav-masthead justify-content-center float-md-end">
     {{ range .Site.RegularPages }}
-    {{- if eq .Params.showInMenu true -}}
-    <a class="nav-link" href="{{- .Permalink | relURL -}}" aria-current="page">
+
+{{- if eq .Params.showInMenu true -}}
+    <a href="{{- .Permalink | relURL -}}" class="nav-link">
       {{- .Title -}}
     </a>
     {{- end -}}
