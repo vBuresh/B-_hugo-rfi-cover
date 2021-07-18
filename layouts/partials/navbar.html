@@ -1,4 +1,4 @@
-<header class="mb-auto">
+<header class="mb-auto text-center">
   <div class="float-md-start mb-0">
     <a class="navbar-brand" style="color: {{ .Site.Params.mainColour }}" aria-current="page" href="{{ "/" | relURL }}">
       {{- if .Site.Params.logo -}}
@@ -38,14 +38,6 @@
     {{- end -}}
     {{- end -}}
     {{- end -}}
-    {{ if .Site.Params.darkMode -}}
-    <a class="nav-link">
-      <span class="form-check form-switch">
-        <input type="checkbox" class="form-check-input" id="darkSwitch" />
-        <!-- <label class="custom-control-label" for="darkSwitch">Dark Mode</label> -->
-      </span>
-    {{- partial "darkmode-js-navbar.html" . -}}
-    </a>
-    {{ end -}}
+    {{- partial "sidebar-btn-reverse.html" . -}}
   </nav>
 </header>

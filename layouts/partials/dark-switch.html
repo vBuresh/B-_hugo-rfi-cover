@@ -1,0 +1,10 @@
+<!-- dark-mode -->
+{{ if .Site.Params.darkMode -}}
+<a class="nav-link">
+  <span class="form-check form-switch">
+    <input type="checkbox" class="form-check-input" id="darkSwitch" />
+    <label class="custom-control-label" for="darkSwitch">{{ i18n "darkMode" }}</label>
+  </span>
+{{- partial "darkmode-js-navbar.html" . -}}
+</a>
+{{ end -}}
