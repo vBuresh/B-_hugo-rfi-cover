@@ -11,7 +11,7 @@
 - id: mainMenu
   translation: "Меню"
 - id: menuHugo
-  translation: "Framework Hugo"
+  translation: "Фреймворк Hugo"
 - id: menuwDev
   translation: "wwwDev"
 - id: allTags
@@ -48,3 +48,7 @@
   translation: "Редполитика"
 - id: pageTOC
   translation: "Оглавление"
+- id: settings
+  translation: "Настройки"
+- id: darkMode
+  translation: "Темный режим"

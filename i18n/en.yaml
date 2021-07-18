@@ -11,11 +11,11 @@
 - id: mainMenu
   translation: "Menu"
 - id: menuHugo
-  translation: "Фреймворк Hugo"
+  translation: "Framework Hugo"
 - id: menuwDev
   translation: "wwwDev"
 - id: allTags
-  translation: "Все рубрики"
+  translation: "All tags"
 - id: newPublications
   translation: "New publications"
 - id: categories
@@ -48,3 +48,7 @@
   translation: "Editorial policy"
 - id: pageTOC
   translation: "What's on this Page"
+- id: settings
+  translation: "Settings"
+- id: darkMode
+  translation: "Dark Mode"
