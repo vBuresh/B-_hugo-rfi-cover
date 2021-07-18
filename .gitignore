@@ -13,15 +13,11 @@ assets/css/bootstrap-utilities.css
 
 /content/
 
-static/images
-static/js/bootstrap.bundle.min.js.map
-static/css
+static/fonts/golos
 
 example_*
 public/
 @_site/
-
-wMedia/
 
 # Вспомогательные директории и файлы
 *.log*
@@ -30,10 +26,10 @@ resources/
 vDevs/
 wREADME.md
 
-# исключаются только b6_ и.или s8_
-#!не распространяется на b6- и s8-
 b6_*
+*_b6
 g8_*
+*g8_
 
 # Файлы редактора VScode
 .vscode
