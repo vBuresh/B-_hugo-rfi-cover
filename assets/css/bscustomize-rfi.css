@@ -24,6 +24,8 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.maincolour-bg: var(--mainColour);
+
 /*TODO change acsient color 205-211 */
 
 a {
@@ -43,7 +45,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 /* padding: 1rem;
