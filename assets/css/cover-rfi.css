@@ -1,4 +1,7 @@
  /* * Globals */
+.cover-container {
+ max-width: 42em;
+}
  /* * Header */
 .nav-masthead .nav-link {
  background-color: transparent;

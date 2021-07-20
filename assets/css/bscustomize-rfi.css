@@ -24,12 +24,21 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.maincolour-bg: var(--mainColour);
+/* bs-6074 */
+.offcanvas-body {
+  text-align: left;
+}
+
+/*
+.btn-close {
+ color: silver;
+}
+*/
 
 /*TODO change acsient color 205-211 */
 
 a {
-  color: #0d6efd;
+  color: var(--mainColour);
   text-decoration: none;
 }
 a:hover {
@@ -37,33 +46,24 @@ a:hover {
   text-decoration: none;
 }
 
-
 /* bs228 */
 
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
   font-size: 1em;
 }
+
+/* syntax */
 
 /* padding: 1rem;
 background-color: var(--c0de-bg-chroma);
 color: #f8f9fa;
 font-size: 1em; */
 
-.cover-container {
-  max-width: 42em;
-}
-
-/* syntax */
-
 /* Background */
 .chroma {
   color: #f8f8f2;
   background-color: var(--code-bg-chroma);
-  font-family: var(--bs-font-monospace);
+  font-family: --bs-dark--bs-font-monospace);
   padding: 10px 10px 0;
 }
 /* Other */ .chroma .x {  }
@@ -173,4 +173,17 @@ font-size: 1em; */
 
 [data-theme="dark"] .bg-white {
   background-color: #000 !important;
+}
+
+/* NOTE B^ */
+/* FIXME добиться переключения  */
+
+[data-theme="dark"] .offcanvas .list-group-item {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .offcanvas .card {
+  background-color: #111 !important;
+  color: #eee;
 }
