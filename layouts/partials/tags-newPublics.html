@@ -1,0 +1,12 @@
+<div class="card border-0">
+  <div class="card-body pb-0">
+    <h5 class="card-title">
+      {{ i18n "newPublications" }}
+    </h5>
+    </div>
+    <div class="list-group">
+      {{ range first 5 .Site.RegularPages }}
+      <a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a>
+      {{ end }}
+    </div>
+</div>
