@@ -18,13 +18,13 @@
     {{- partial "darkmode-js-subbody.html" . -}}
     {{- end }}
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      {{- partial "navbar.html" . -}}
+      {{- partial "navbaroff.html" . -}}
       <div id="content">
         <main>{{- block "main" . }}
           {{- end }}</main>
       </div>
       {{- partial "footer.html" . -}}
-      {{- partial "sidebar.html" . -}}
+      {{- partial "navbaroffcanvas.html" . -}}
       {{- partial "scripts.html" . -}}
     </div>
   </body>
