@@ -48,7 +48,9 @@
   translation: "Редполитика"
 - id: pageTOC
   translation: "Оглавление"
-- id: settings
-  translation: "Настройки"
+- id: goSearch
+  translation: "Найти"
+- id: search
+  translation: "Поиск по сайту"
 - id: darkMode
-  translation: "Темный режим"
+  translation: "Темный режим (вкл/выкл)"

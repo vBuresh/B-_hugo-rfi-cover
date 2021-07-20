@@ -48,7 +48,9 @@
   translation: "Editorial policy"
 - id: pageTOC
   translation: "What's on this Page"
-- id: settings
-  translation: "Settings"
+- id: goSearch
+  translation: "Search"
+- id: search
+  translation: "Search"
 - id: darkMode
   translation: "Dark Mode"
