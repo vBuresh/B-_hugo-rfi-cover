@@ -15,3 +15,5 @@ categories: [Веб-разработка]
 tags: [SVG, Favicons, Icons]
 toc: true
 ---
+
+<!-- {linenos=table,hl_lines=[1,"4-5"],linenostart=6010} -->

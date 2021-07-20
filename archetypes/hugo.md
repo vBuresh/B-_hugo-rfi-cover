@@ -16,3 +16,5 @@ tags: [Hugo, Шаблоны]
 # tags: [Hugo, Templates, Taxonomy]
 toc: true
 ---
+
+<!-- {linenos=table,hl_lines=[1,"4-5"],linenostart=6010} -->
