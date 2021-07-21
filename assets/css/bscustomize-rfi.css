@@ -22,6 +22,25 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --mainColour: var(--bs-primary);
   --bs-font-sans-serif: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /*rfi Theme variables */
+  --fri-gray-100: #f8f9fa;
+  --fri-gray-200: #e9ecef;
+  --fri-gray-300: #dee2e6;
+  --fri-gray-400: #ced4da;
+  --fri-gray-500: #adb5bd;
+  --fri-gray-600: #6c757d;
+  --fri-gray-700: #495057;
+  --fri-gray-800: #343a40;
+  --fri-gray-900: #212529;
+  --rfi-darkHugo: #0a1922;
+  --rfi-darkGimp: #0e2426;
+  --rfi-black:    #000;
+  --doc-black: #1d2d35;
+  --doc-blue-300: #8ed6fb;
+}
+
+.badge {
+ background-color: var(--fri-gray-600);
 }
 
 /* bs-6074 */
@@ -155,35 +174,44 @@ font-size: 1em; */
  */
 
 [data-theme="dark"] {
-  background-color: #111 !important;
-  color: #eee;
+  background-color: var(--rfi-black) !important;
+  color: var(--fri-gray-100);
 }
 
 [data-theme="dark"] .bg-black {
-  background-color: #fff !important;
+  background-color: var(--bs-white) !important;
 }
 
 [data-theme="dark"] .bg-dark {
-  background-color: #eee !important;
+  background-color: var(--fri-gray-100) !important;
 }
 
 [data-theme="dark"] .bg-light {
-  background-color: #222 !important;
+  background-color: var(--fri-gray-800) !important;
 }
 
 [data-theme="dark"] .bg-white {
-  background-color: #000 !important;
+  background-color: var(--rfi-black) !important;
 }
+
 
 /* NOTE B^ */
 /* FIXME добиться переключения  */
-
-[data-theme="dark"] .offcanvas .list-group-item {
-  background-color: #111 !important;
-  color: #eee;
+[data-theme="dark"] .offcanvas {
+  background-color: var(--fri-gray-900) !important;
 }
 
-[data-theme="dark"] .offcanvas .card {
-  background-color: #111 !important;
-  color: #eee;
+[data-theme="dark"] .offcanvas  .list-group a {
+  background-color: var(--fri-gray-800);
+  color: var(--fri-gray-200);
+}
+
+[data-theme="dark"] .offcanvas .list-group-item-action {
+  background-color: var(--fri-gray-800) !important;
+  color: var(--fri-gray-100);
+}
+
+[data-theme="dark"] .offcanvas .list-group-item:hover, .list-group-item:focus {
+  background-color: var(--fri-gray-900);
+  color: var(--doc-blue-300);
 }

@@ -1,10 +1,10 @@
-<section class="list-group">
-<h5 class="pb-2">{{ i18n "allTags" }}</h5>
+<section class="alltags">
+<h5 class="ps-3 pt-3">{{ i18n "allTags" }}</h5>
   {{ range .Site.Taxonomies.tags }}
-  <div class="d-flex justify-content-between align-items-start  bg-light">
+  <div class="list-group d-flex justify-content-between align-items-start">
     <a href="{{ .Page.Permalink }}" class="list-group-item list-group-item-action">
-      <span class="position-absolute top-50 end-0 translate-middle badge rounded-pill bg-dark font-monospace">{{ .Count }}</span>
+      <span class="position-absolute top-50 end-0 translate-middle badge rounded-pill font-monospace">{{ .Count }}</span>
       {{ .Page.Title }}</a>
-  </div>
+</div>
   {{ end }}
 </section>
