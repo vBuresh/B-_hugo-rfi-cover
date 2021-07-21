@@ -35,8 +35,10 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --rfi-darkHugo: #0a1922;
   --rfi-darkGimp: #0e2426;
   --rfi-black:    #000;
-  --doc-black: #1d2d35;
-  --doc-blue-300: #8ed6fb;
+  --rfi-color: #00d1b2;
+  --rfi-vivid-cyan: #0dcaf0;
+  --rfi-very-light-blue: #99ccff;
+  --doc-purple:   #5d2f86;
 }
 
 .badge {
@@ -50,20 +52,23 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
 
 /*
 .btn-close {
- color: silver;
-}
-*/
+ color: var(--rfi-very-light-blue);
+} */
+
 
 /*TODO change acsient color 205-211 */
 
 a {
-  color: var(--mainColour);
+  color: var(--bs-prymary);
   text-decoration: none;
 }
 a:hover {
   color: #0a58ca;
+  /* color: var(--rfi-color); */
   text-decoration: none;
 }
+
+
 
 /* bs228 */
 
@@ -201,7 +206,7 @@ font-size: 1em; */
   background-color: var(--fri-gray-900) !important;
 }
 
-[data-theme="dark"] .offcanvas  .list-group a {
+[data-theme="dark"] .offcanvas .list-group a {
   background-color: var(--fri-gray-800);
   color: var(--fri-gray-200);
 }
@@ -213,5 +218,15 @@ font-size: 1em; */
 
 [data-theme="dark"] .offcanvas .list-group-item:hover, .list-group-item:focus {
   background-color: var(--fri-gray-900);
-  color: var(--doc-blue-300);
+  color: var(--rfi-very-light-blue);
+}
+
+[data-theme="dark"] a {
+  color: var(--rfi-very-light-blue);
+  text-decoration: none;
+}
+[data-theme="dark"] a:hover {
+  color: var(--bs-primary);
+  /* color: var(--rfi-color); */
+  text-decoration: none;
 }
