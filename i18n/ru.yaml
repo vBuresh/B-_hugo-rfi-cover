@@ -53,4 +53,4 @@
 - id: search
   translation: "Поиск по сайту"
 - id: darkMode
-  translation: "Темный режим (вкл/выкл)"
+  translation: "Цветовая схема: светлая / тёмная"

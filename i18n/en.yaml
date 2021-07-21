@@ -53,4 +53,4 @@
 - id: search
   translation: "Search"
 - id: darkMode
-  translation: "Dark Mode"
+  translation: "Color Schemes: light / dark"
