@@ -34,6 +34,7 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --fri-gray-900: #212529;
   --rfi-darkHugo: #0a1922;
   --rfi-darkGimp: #0e2426;
+  --rfi-darkMode: #111;
   --rfi-black:    #000;
   --rfi-color: #00d1b2;
   --rfi-vivid-cyan: #0dcaf0;
@@ -179,7 +180,7 @@ font-size: 1em; */
  */
 
 [data-theme="dark"] {
-  background-color: var(--rfi-black) !important;
+  background-color: var(--rfi-darkMode) !important;
   color: var(--fri-gray-100);
 }
 
@@ -196,7 +197,7 @@ font-size: 1em; */
 }
 
 [data-theme="dark"] .bg-white {
-  background-color: var(--rfi-black) !important;
+  background-color: var(--rfi-darkMode) !important;
 }
 
 
