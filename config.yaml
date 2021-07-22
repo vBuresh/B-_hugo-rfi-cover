@@ -34,10 +34,9 @@ publishDir:             "@_site"
 # canonifyURLs:         true.
 canonifyURLs:           false
 
-
 params:
 # Brand
-  logo:                 "/images/logo-cover.svg"
+  logo:                 "/images/logoCoverRFi.svg"
   title:                Cover
   description:          A one-page template for building simple and beautiful home pages.
 # for meta
@@ -62,8 +61,9 @@ params:
 
   # mainColour:         "#F39200"
   # mainColour:         "#00d1b2"
+  mainColour:           "#33ccff"
   # bs $primary, $secondary, $success, $warning, $light
-  mainColour:         "#0d6efd"
+  # mainColour:         "#0d6efd"
   # mainColour:         "#6c757d"
   # mainColour:         "#198754"
   # mainColour:         "#fd9c0d"

@@ -14,13 +14,11 @@ https://getbootstrap.com/docs/5.0/customize/css-variables/
   mainAccent: rgb(from ... r g b / 80%);
 https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
 }
-  var(--myAccent)
-*/
-
-:root {
-  --code-bg-chroma: #282c34;
   --mainColour: var(--bs-primary);
-  --bs-font-sans-serif: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+*/
+:root {
+  --mainColour: var(--rfi-vividCyan);
+  --bs-font-sans-serif: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /*rfi Theme variables */
   --fri-gray-100: #f8f9fa;
@@ -32,18 +30,29 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --fri-gray-700: #495057;
   --fri-gray-800: #343a40;
   --fri-gray-900: #212529;
+  --rfi-darkHugoBlue: #132029;
   --rfi-darkHugo: #0a1922;
-  --rfi-darkGimp: #0e2426;
-  --rfi-darkMode: #111;
+  --rfi-verydarkHugo: #040b0e;
+  --rfi-blackDakmode: #111;
   --rfi-black:    #000;
   --rfi-color: #00d1b2;
-  --rfi-vivid-cyan: #0dcaf0;
-  --rfi-very-light-blue: #99ccff;
+  --rfi-vividCyan: #33ccff;
+  --rfi-aHover:  #0a58ca;
   --doc-purple:   #5d2f86;
+/* bg for syntax Highlighting */
+  --code-bg-chroma: #282c34;
 }
 
+/* rfi-dev
+  var(--myAccent)
+  #3db9bb Moderate cyan Освежающий (сине-зеленый)
+  #33cccc Strong cyan.
+  #339999 Dark moderate cyan.
+*/
+
 .badge {
- background-color: var(--fri-gray-600);
+ background-color: var(--rfi-vividCyan);
+ color: var(--rfi-darkHugo);
 }
 
 /* bs-6074 */
@@ -53,23 +62,21 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
 
 /*
 .btn-close {
- color: var(--rfi-very-light-blue);
+ color: var(--rfi-vividCyan);
 } */
 
 
 /*TODO change acsient color 205-211 */
 
 a {
-  color: var(--bs-prymary);
+  color: var(--mainColour);
   text-decoration: none;
 }
 a:hover {
-  color: #0a58ca;
+  color: var(--rfi-aHover);
   /* color: var(--rfi-color); */
   text-decoration: none;
 }
-
-
 
 /* bs228 */
 
@@ -84,7 +91,9 @@ background-color: var(--c0de-bg-chroma);
 color: #f8f9fa;
 font-size: 1em; */
 
+
 /* Background */
+
 .chroma {
   color: #f8f8f2;
   background-color: var(--code-bg-chroma);
@@ -180,7 +189,7 @@ font-size: 1em; */
  */
 
 [data-theme="dark"] {
-  background-color: var(--rfi-darkMode) !important;
+  background-color: var(--rfi-darkHugo) !important;
   color: var(--fri-gray-100);
 }
 
@@ -197,37 +206,54 @@ font-size: 1em; */
 }
 
 [data-theme="dark"] .bg-white {
-  background-color: var(--rfi-darkMode) !important;
+  background-color: var(--rfi-darkHugo) !important;
 }
-
 
 /* NOTE B^ */
 /* FIXME добиться переключения  */
 [data-theme="dark"] .offcanvas {
-  background-color: var(--fri-gray-900) !important;
+  background-color: var(--rfi-darkHugo) !important;
 }
 
-[data-theme="dark"] .offcanvas .list-group a {
-  background-color: var(--fri-gray-800);
+[data-theme="dark"] .list-group a {
+  background-color: var(--rfi-darkHugoBlue);
   color: var(--fri-gray-200);
 }
 
-[data-theme="dark"] .offcanvas .list-group-item-action {
-  background-color: var(--fri-gray-800) !important;
+[data-theme="dark"] .list-group-item-action {
+  background-color: var(--rfi-darkHugoBlue) !important;
   color: var(--fri-gray-100);
 }
 
-[data-theme="dark"] .offcanvas .list-group-item:hover, .list-group-item:focus {
-  background-color: var(--fri-gray-900);
-  color: var(--rfi-very-light-blue);
+[data-theme="dark"] .list-group-item:hover, .list-group-item:focus {
+  background-color: var(--rfi-verydarkHugo);
+  color: var(--rfi-vividCyan);
+}
+
+[data-theme="dark"] .nav-masthead .nav-link {
+ border-bottom: .25rem solid transparent;
+ color: var(--bs-white);
+}
+
+[data-theme="dark"] .nav-masthead .active {
+  color: var(--bs-white);
+  border-bottom-color: var(--bs-white);
 }
 
 [data-theme="dark"] a {
-  color: var(--rfi-very-light-blue);
+  color: var(--rfi-vividCyan);
   text-decoration: none;
 }
 [data-theme="dark"] a:hover {
   color: var(--bs-primary);
   /* color: var(--rfi-color); */
   text-decoration: none;
+}
+
+.rfi-navbaroff .navbar-brand:hover, .navbar-brand:focus {
+  color: var(--rfi-vividCyan);
+}
+
+[data-theme="dark"] a .navbar-brand {
+  color: var(--bs-white);
 }

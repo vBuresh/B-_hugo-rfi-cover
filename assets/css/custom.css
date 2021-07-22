@@ -1,0 +1,3 @@
+/* {{ .Site.Params.mainColour }} */
+:root {
+  --mainColour: var(--rfi-vividCyan);

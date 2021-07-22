@@ -6,7 +6,7 @@
 .nav-masthead .nav-link {
  background-color: transparent;
  border-bottom: .25rem solid transparent;
- color: var(--mainColour);
+ color: var(--rfi-black);
  font-weight: 400;
  padding: .25rem 0;
 }
@@ -14,7 +14,7 @@
  .nav-masthead .nav-link:focus,
  .nav-masthead .nav-link:hover {
    /* border-bottom-color: rgba(255, 255, 255, .25); */
-   border-bottom-color: #adb5bd;
+   border-bottom-color: var(--fri-gray-400);
  }
 
  .nav-masthead .nav-link+.nav-link {
@@ -31,19 +31,26 @@ $gray-100; #f8f9fa; */
    padding: 1rem;
  } */
 
- .divider {
-   background: var(--mainColour);
-   border-radius: 50px;
-   height: 4px;
-   margin-bottom: 1rem;
-   width: 68px;
-
-   &.text-center {
-     margin: 0 auto;
-   }
- }
+.divider {
+  background: var(--mainColour);
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1rem;
+  width: 68px;
+  &.text-center {
+    margin: 0 auto;
+  }
+}
 
  /* B^ bs castomisation */
- .navbar-brand {
+.navbar-brand {
    font-size: 1.25rem;
  }
+
+.rfi-navbaroff a {
+   color: var(--bs-black);
+}
+
+.rfi-navbaroff .navbar-brand:hover, .navbar-brand:focus {
+   color: var(--rfi-aHover);
+}

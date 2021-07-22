@@ -1,6 +1,6 @@
 <header class="mb-auto text-center">
-  <div class="float-md-start mb-0">
-    <a class="navbar-brand" style="color: {{ .Site.Params.mainColour }}" aria-current="page" href="{{ "/" | relURL }}">
+  <div class="float-md-start mb-0 rfi-navbaroff">
+    <a class="navbar-brand" aria-current="page" href="{{ "/" | relURL }}">
       {{- if .Site.Params.logo -}}
       {{- $out_fo  := "brand.svg" -}}
       {{- $img_n   := .Site.Params.logo -}}
@@ -9,9 +9,9 @@
       {{- if eq $type "svg" -}}
       {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
       {{- end -}}
-      <img src="{{- $img.Permalink | relURL -}}" width="30" height="30" class="d-inline-block align-top me-2" alt="brand">
+      <img src="{{- $img.Permalink | relURL -}}" width="30" height="30" class="d-inline-block align-top pt-0 me-2" alt="brand">
       {{- end -}}
-      <span class="navbar-brand mb-0 h1">
+      <span class="navbar-brand pt-1 mb-0 h1">
         {{- if .Site.Params.title -}}
         {{ .Site.Params.title }}
       </span>
@@ -32,7 +32,7 @@
     {{- $secCount := len .Sections -}}
     {{- if (ne $secCount 0) }}
     {{- else -}}
-    <a style="color: {{ .Site.Params.mainColour }}" class="nav-link" href="{{- .Permalink | relURL -}}">
+    <a class="nav-link" href="{{- .Permalink | relURL -}}">
       {{- .Title -}}
     </a>
     {{- end -}}
