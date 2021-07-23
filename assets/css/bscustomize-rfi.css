@@ -40,7 +40,7 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --rfi-aHover:  #0a58ca;
   --doc-purple:   #5d2f86;
 /* bg for syntax Highlighting */
-  --code-bg-chroma: #282c34;
+  --chroma-comment: #75715e
 }
 
 /* rfi-dev
@@ -96,7 +96,7 @@ font-size: 1em; */
 
 .chroma {
   color: #f8f8f2;
-  background-color: var(--code-bg-chroma);
+  background-color: var(--rfi-darkHugoBlue);
   font-family: --bs-dark--bs-font-monospace);
   padding: 10px 10px 0;
 }
@@ -104,9 +104,11 @@ font-size: 1em; */
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
-/* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
-/* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
-/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineHighlight */
+.chroma .hl { display: block; width: 100%; background-color: var(--fri-gray-800) }
+/* FIXME display: block; в chromium - ломает нумерацию пропускает строку
+ LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: var(--fri-gray-600)}
+/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color:var(--fri-gray-600) }
 /* Keyword */ .chroma .k { color: #66d9ef }
 /* KeywordConstant */ .chroma .kc { color: #66d9ef }
 /* KeywordDeclaration */ .chroma .kd { color: #66d9ef }
@@ -161,13 +163,13 @@ font-size: 1em; */
 /* Operator */ .chroma .o { color: #f92672 }
 /* OperatorWord */ .chroma .ow { color: #f92672 }
 /* Punctuation */ .chroma .p {  }
-/* Comment */ .chroma .c { color: #75715e }
-/* CommentHashbang */ .chroma .ch { color: #75715e }
-/* CommentMultiline */ .chroma .cm { color: #75715e }
-/* CommentSingle */ .chroma .c1 { color: #75715e }
-/* CommentSpecial */ .chroma .cs { color: #75715e }
-/* CommentPreproc */ .chroma .cp { color: #75715e }
-/* CommentPreprocFile */ .chroma .cpf { color: #75715e }
+/* Comment */ .chroma .c { color: var(--chroma-comment) }
+/* CommentHashbang */ .chroma .ch { color: var(--chroma-comment) }
+/* CommentMultiline */ .chroma .cm { color: var(--chroma-comment) }
+/* CommentSingle */ .chroma .c1 { color: var(--chroma-comment) }
+/* CommentSpecial */ .chroma .cs { color: var(--chroma-comment) }
+/* CommentPreproc */ .chroma .cp { color: var(--chroma-comment) }
+/* CommentPreprocFile */ .chroma .cpf { color: var(--chroma-comment) }
 /* Generic */ .chroma .g {  }
 /* GenericDeleted */ .chroma .gd { color: #f92672 }
 /* GenericEmph */ .chroma .ge { font-style: italic }
@@ -177,7 +179,7 @@ font-size: 1em; */
 /* GenericOutput */ .chroma .go {  }
 /* GenericPrompt */ .chroma .gp {  }
 /* GenericStrong */ .chroma .gs { font-weight: bold }
-/* GenericSubheading */ .chroma .gu { color: #75715e }
+/* GenericSubheading */ .chroma .gu { color: var(--chroma-comment) }
 /* GenericTraceback */ .chroma .gt {  }
 /* GenericUnderline */ .chroma .gl {  }
 /* TextWhitespace */ .chroma .w {  }
@@ -202,7 +204,7 @@ font-size: 1em; */
 }
 
 [data-theme="dark"] .bg-light {
-  background-color: var(--fri-gray-800) !important;
+  background-color: var(--fri-gray-900) !important;
 }
 
 [data-theme="dark"] .bg-white {
