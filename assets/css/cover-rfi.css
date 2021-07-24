@@ -21,16 +21,6 @@
    margin-left: 1rem;
  }
 
- /* highlight
-@B^20210617  _reboot.scss 287
-$gray-100; #f8f9fa; */
- /* pre {
-   background-color: #282c34;
-   color: #f8f9fa;
-   font-size: 1em;
-   padding: 1rem;
- } */
-
 .divider {
   background: var(--mainColour);
   border-radius: 50px;
@@ -42,15 +32,6 @@ $gray-100; #f8f9fa; */
   }
 }
 
- /* B^ bs castomisation */
-.navbar-brand {
-   font-size: 1.25rem;
- }
-
-.rfi-navbaroff a {
-   color: var(--bs-black);
-}
-
 .rfi-navbaroff .navbar-brand:hover, .navbar-brand:focus {
-   color: var(--rfi-aHover);
-}
+    color: var(--rfi-aHover);
+ }
