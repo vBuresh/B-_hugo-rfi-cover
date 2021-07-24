@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}" class="h-100">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{- block "title" . -}}
+      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+      {{- end -}}</title>
+
+    <link rel="canonical" href="{{ .Permalink }}">
+<!-- NOTE
+Placeholder svg used in the bs docs.
+Remember to update `site/_layouts/examples.html` too if this changes!
+-->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    {{ range .Page.Params.extra_css }}
+    {{ "<!-- Custom styles for this template -->" | safeHTML }}
+    <link href="{{ . }}" rel="stylesheet">
+    {{- end }}
+  </head>
+  <body{{ with .Page.Params.body_class }} class="{{ . }}" {{ end }}>
+    {{ .Content }}
+    {{ if ne .Page.Params.include_js false -}}
+    <!-- https://gohugo.io/functions/hugo/#prose -->
+    {{- if eq hugo.Environment "production" -}}
+    {{- end }}
+    {{ range .Page.Params.extra_js -}}
+    <script{{ with .async }} async{{ end }} src="{{ .src }}" {{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous" {{ end }}>
+      </script>
+      {{- end -}}
+      {{- end }}
+      </body>
+</html>
