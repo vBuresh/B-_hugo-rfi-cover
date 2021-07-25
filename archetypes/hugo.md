@@ -17,4 +17,7 @@ tags: [Hugo, Шаблоны]
 toc: true
 ---
 
-<!-- {linenos=table,hl_lines=[1,"4-5"],linenostart=6010} -->
+<!--
+— «»
+{linenos=table,hl_lines=[1,"4-5"],linenostart=6010}
+-->

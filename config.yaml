@@ -52,10 +52,10 @@ params:
   darkMode:             true
   # darkMode:           false
 
-  cssMinify:            true
-  cssIntegrity:         true
-  jsMinify:             true
-  jsIntegrity:          true
+  cssMinify:            false
+  cssIntegrity:         false
+  jsMinify:             false
+  jsIntegrity:          false
 
   # option to specify the main colour of the theme
 
