@@ -38,7 +38,7 @@ https://www.w3.org/TR/2021/WD-css-color-5-20210601/#relative-HWB
   --rfi-color: #33ccff;
   --rfi-aHover:  #0a58ca;
   --rfi-aLinks:  var(--mainColour);
-  --bd-info:         var(--rfi-color); /*#5bc0de*/
+  --bd-info:         var(--rfi-color);
   --bd-success:     #33ffcc;
   --bd-warning:       #ffcc33;
   --bd-danger:        #cc0066;
@@ -353,6 +353,7 @@ code {
 [data-theme="dark"] blockquote {
   background-color: var(--rfi-darkHugoBlue);
   color: var(--fri-gray-100);
+}
 
 .rfi-navbaroff .navbar-brand:hover, .navbar-brand:focus {
   color: var(--mainColour);
