@@ -12,10 +12,8 @@ assets/css/bootstrap-reboot.css
 assets/css/bootstrap-utilities.css
 
 /content/
-layouts/_default/examples.html
+
 layouts/_default/coverdark.html
-layouts/shortcodes/example.html
-layouts/shortcodes/placeholder.html
 
 static/fonts/golos
 
