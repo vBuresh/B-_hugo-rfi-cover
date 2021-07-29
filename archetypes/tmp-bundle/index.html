@@ -1,0 +1,42 @@
+---
+layout: samples
+title: {{ replace .Name "-" " " | title }}
+subtitle: subtitle of the published article
+date: {{ .Date }}
+Lastmod: {{ .Date }}
+# subtitle: '— «»'
+summary: three-line summary of the article.
+extra_css:
+#  - 'https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap'
+  - "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  - "sample.css"
+html_class: "h-100"
+body_class: "text-center d-flex h-100"
+extra_js:
+  - src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  - src: "sample.js"
+categories: [Веб-разработка]
+  categories: ['Web development']
+  tags: [CSS, Тема]
+draft: false
+navbarON: true
+---
+
+
+  <main role="main">
+    <h1>Шаблон для примеров</h1>
+    <p class="lead">Просто добавляем содержимое</p>
+    <ul class="list-unstyled">
+      <li>&middot; Uses local storage to save preference</li>
+      <li>&middot; Only 383 Bytes minified and gzipped!</li>
+    </ul>
+    <p>
+      <a href="{{< ref "cmir/wdev/twbs/dark-mode/dark-mode-switch" >}}" target="_blank" rel="noopener" class="btn btn-lg btn-secondary">
+        Подробнее...
+      </a>
+    </p>
+  </main>
+
+  <footer class="mt-auto">
+    <p>&copy; B^ - очень интеллектуальная собственность. 2021</p>
+  </footer>
