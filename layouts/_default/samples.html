@@ -10,33 +10,30 @@
       {{- end -}}</title>
 
     <link rel="canonical" href="{{ .Permalink }}">
-<!-- NOTE
-Placeholder svg used in the bs docs.
-Remember to update `site/_layouts/examples.html` too if this changes!
--->
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
     {{ range .Page.Params.extra_css }}
     {{ "<!-- Custom styles for this template -->" | safeHTML }}
     <link href="{{ . }}" rel="stylesheet">
+    <!-- dark-mode styles -->
+     <style>
+       [data-theme="dark"] { background-color: #111 !important; color: #eee; }
+       [data-theme="dark"] .bg-black { background-color: #fff !important; }
+       [data-theme="dark"] .bg-dark { background-color: #eee !important; }
+       [data-theme="dark"] .bg-light { background-color: #222 !important; }
+     </style>
+    <!-- /dark-mode styles -->
     {{- end }}
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}" {{ end }}>
-    {{ .Content }}
+  <script type="text/javascript">
+    var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("load",(function(){if(darkSwitch){initTheme();darkSwitch.addEventListener("change",(function(){resetTheme()}))}}));function initTheme(){var darkThemeSelected=localStorage.getItem("darkSwitch")!==null&&localStorage.getItem("darkSwitch")==="dark";darkSwitch.checked=darkThemeSelected;darkThemeSelected?document.body.setAttribute("data-theme","dark"):document.body.removeAttribute("data-theme")}function resetTheme(){if(darkSwitch.checked){document.body.setAttribute("data-theme","dark");localStorage.setItem("darkSwitch","dark")}else{document.body.removeAttribute("data-theme");localStorage.removeItem("darkSwitch")}}
+</script>
+    <!-- /dark-mode scripts -->
+    <div class="container">
+       {{ if .Params.navbarON -}}
+       {{- partial "samples/nav-sample.html" . -}}
+       {{- end -}}
+       {{ .Content }}
+    </div>
     {{ if ne .Page.Params.include_js false -}}
     <!-- https://gohugo.io/functions/hugo/#prose -->
     {{- if eq hugo.Environment "production" -}}
