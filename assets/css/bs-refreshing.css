@@ -137,12 +137,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* bs240 */
-code {
-  font-size: 1em;
-  /* font-size: 0.875em; */
-  color: #cc0066;
-}
+
 
 /* Callouts */
 .bd-callout {
@@ -213,7 +208,15 @@ Remember to update `_layouts/examples.html` too if this changes! */
   margin-bottom: 1rem;
 }
 
-.chroma { color: var(--fri-gray-200); background-color: var(--rfi-darkHugoBlue); padding: 10px 10px 0; }
+/* bs240 */
+code {
+  font-size: 1em;
+  /* font-size: 0.875em; */
+  color: #cc0066;
+}
+
+pre,
+.chroma { color: var(--fri-gray-200); background-color: var(--rfi-darkHugoBlue); padding: 10px; }
 /* Other */ .chroma .x {}
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
