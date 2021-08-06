@@ -1,0 +1,12 @@
+<section class="py-2">
+  <a class="btn btn-link dropdown-toggle" data-bs-toggle="collapse" href="#collapseLawRed" role="button" aria-expanded="false" aria-controls="collapseLawRed">
+    Изменения и дополнения:
+  </a>
+  <div class="collapse" id="collapseLawRed">
+    <div class="card border-0">
+      <div class="card-body">
+        {{ .Inner | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>

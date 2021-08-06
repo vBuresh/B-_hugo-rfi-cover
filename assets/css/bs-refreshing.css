@@ -310,7 +310,7 @@ pre,
   background-color: var(--fri-gray-100) !important;
 }
 
-[data-theme="dark"] .table {
+[data-theme="dark"] .card, .table {
   background-color: var(--rfi-darkHugoBlue) !important;
   color: var(--fri-gray-200);
   border-color: var(--fri-gray-600);
