@@ -158,9 +158,9 @@ blockquote i::before {
 }
 
 /* bs-142 - для типа контента law отступы неприемемы*/
-.law ol, ul {
+/* .law ol, ul {
   padding-left: 0;
-}
+} */
 
 /*
 .btn-close {

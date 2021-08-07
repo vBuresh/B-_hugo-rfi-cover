@@ -15,8 +15,8 @@
     <div class="divider"></div>
     <section>
       {{ .Description }}
+      {{- partial "headerLaw" . -}}
     </section>
-    {{- partial "toc-collapse.html" . -}}
   </header>
 <article class="law">
   {{ .Content }}
