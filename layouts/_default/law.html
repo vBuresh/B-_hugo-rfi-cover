@@ -1,0 +1,25 @@
+{{ define "body_override" }}<body class="d-flex text-start">{{ end }}
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<section class="text-start">
+  <header class="mt-5 mb-3">
+    <h1>{{ .Title }}
+      {{ if .Page.Params.subtitle }}
+      <small class="text-muted">
+        {{ .Page.Params.subtitle }}
+      </small>
+      {{ end }}
+    </h1>
+    <div class="divider"></div>
+    <section>
+      {{ .Description }}
+    </section>
+    {{- partial "toc-collapse.html" . -}}
+  </header>
+<article class="law">
+  {{ .Content }}
+</article>
+</section>
+{{ end }}
