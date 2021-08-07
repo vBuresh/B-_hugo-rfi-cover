@@ -89,6 +89,7 @@ a:hover {
 
 /* Callouts */
 blockquote,
+.bquote,
 .bd-callout {
   padding: 1rem;
   margin-top: 1rem;
@@ -132,7 +133,7 @@ blockquote i {
   color: var(--fri-gray-600);
   font-size: 0.875em;
   text-align: right !important;
-  margin-top: .5rem !important;
+  margin-top: .5em !important;
   margin-bottom: -1rem;
 }
 
@@ -140,9 +141,25 @@ blockquote i::before {
   content: "— ";
 }
 
+.bquote blockquote {
+  background-image: none;
+  border: 0;
+  padding: 0 2.3em 0 0;
+}
+
+.bquote svg {
+  float: right;
+  margin-right: .5em;
+}
+
 /*  Components */
 .rfi-navbaroff a {
   color: var(--bs-black);
+}
+
+/* bs-142 - для типа контента law отступы неприемемы*/
+.law ol, ul {
+  padding-left: 0;
 }
 
 /*
