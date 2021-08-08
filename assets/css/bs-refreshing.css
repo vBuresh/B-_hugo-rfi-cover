@@ -158,9 +158,30 @@ blockquote i::before {
 }
 
 /* bs-142 - для типа контента law отступы неприемемы*/
-/* .law ol, ul {
+.doclaw ol, ul {
   padding-left: 0;
-} */
+}
+
+.doctoc ol, ul {
+  padding-left: 1.2rem;
+}
+
+.doctoc a {
+  /* color: var(--rfi-aLinks); */
+  text-decoration: none;
+}
+
+.doctoc a:hover {
+  color: var(--mainColour);
+  /* color: var(--mainColour); */
+  text-decoration: none;
+}
+.doctoc .list-group-item:focus {
+  color: var(--rfi-aHover);
+  background-color: var(--fri-gray-100);
+  border
+  text-decoration: underline;
+}
 
 /*
 .btn-close {
@@ -327,7 +348,7 @@ pre,
   background-color: var(--fri-gray-100) !important;
 }
 
-[data-theme="dark"] .card, .table {
+[data-theme="dark"] .card-body .table {
   background-color: var(--rfi-darkHugoBlue) !important;
   color: var(--fri-gray-200);
   border-color: var(--fri-gray-600);
@@ -352,6 +373,11 @@ pre,
   color: var(--fri-gray-200);
 }
 
+[data-theme="dark"] .list-group.doctoc a {
+  background-color: var(--rfi-darkHugo);
+  color: var(--fri-gray-200);
+}
+
 [data-theme="dark"] .list-group-item-action {
   background-color: var(--rfi-darkHugoBlue) !important;
   color: var(--fri-gray-100);
@@ -359,6 +385,10 @@ pre,
 
 [data-theme="dark"] .list-group-item:hover, .list-group-item:focus {
   background-color: var(--rfi-verydarkHugo);
+  color: var(--mainColour);
+}
+
+[data-theme="dark"] .doctoc a:hover, .doctoc a:focus {
   color: var(--mainColour);
 }
 
