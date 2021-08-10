@@ -18,6 +18,8 @@
   translation: "Все теги"
 - id: newPublications
   translation: "Новые публикации"
+- id: lastmodPublications
+  translation: "Последние обновления"
 - id: categories
   translation: "Категории"
 - id: tags

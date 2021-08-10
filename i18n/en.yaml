@@ -18,6 +18,8 @@
   translation: "All tags"
 - id: newPublications
   translation: "New publications"
+- id: lastmodPublications
+  translation: "Updated publications"
 - id: categories
   translation: "Categories"
 - id: tags
