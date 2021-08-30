@@ -141,6 +141,19 @@ blockquote i::before {
   content: "— ";
 }
 
+.bd-callout i {
+  display: block;
+  color: var(--fri-gray-600);
+  font-size: 0.875em;
+  text-align: right !important;
+  margin-top: .5em !important;
+  margin-bottom: -1rem;
+}
+
+.bd-callout i::before {
+  content: "— ";
+}
+
 .bquote blockquote {
   background-image: none;
   border: 0;
