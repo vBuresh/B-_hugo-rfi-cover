@@ -223,9 +223,9 @@ Remember to update `_layouts/examples.html` too if this changes! */
   border-left-color: var(--bd-danger) !important;
 }
 
-/* .bd-callout-secondary {
+.bd-callout-secondary {
   border-left-color: var(--bd-secondary) !important;
-} */
+}
 
 .bd-callout-success {
   border-left-color: var(--bd-success) !important;
