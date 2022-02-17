@@ -4,6 +4,7 @@
 *.scss.map
 *.js.map
 /themes/
+.hugo_build.lock
 
 # Folders and files to ignore
 
